@@ -19,7 +19,7 @@ class Developer extends Model
     }
 
     public function leadprojects()
-    {
+   {
         return $this->belongsToMany(Project::class, 'leaddeveloper_project');
 
     }

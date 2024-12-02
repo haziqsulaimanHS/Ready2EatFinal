@@ -2,7 +2,7 @@
 @section('content')
     <div class="container">
         <div class="card">
-            <div class="card-header"><h1>Assign Project</h1></div>
+            <div class="card-header"><h1>Assign Project for {{ $project->name }}</h1></div>
             <div class="card-body">
                 <table class="table">
 
@@ -35,7 +35,6 @@
                                         <label for="developers">Select Lead Developers:</label>
                                         <select name="developers" class="form-control">
                                             @foreach($allDevelopers as $developer)
-                                                <option value="" selected disabled>-- Please Select Lead Developer --</option>
                                                 <option value="{{ $developer->id }}">{{ $developer->name }}</option>
                                             @endforeach
                                         </select>
@@ -79,7 +78,6 @@
                         <label for="developers">Select Developers:</label>
                         <select name="developers[]" class="form-control" multiple>
                             @foreach($allDevelopers as $developer)
-                                <option value="" selected disabled>-- Please Select Developers --</option>
                                 <option value="{{ $developer->id }}">{{ $developer->name }}</option>
                             @endforeach
                         </select>

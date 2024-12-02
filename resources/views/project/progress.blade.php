@@ -20,7 +20,7 @@
                 </thead>
                 <tbody>
                 @php($i=1)
-                @foreach ($progress->sortByDesc('Date_Report') as $entry)
+                @foreach ($progress as $entry)
                     <tr>
                         <td>{{$i++}}</td>
                         <td>{{ $entry->ReportID }}</td>
